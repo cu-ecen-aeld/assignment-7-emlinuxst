@@ -17,6 +17,8 @@ EXTRA_CFLAGS += -I$(LDDINC)
 ifneq ($(KERNELRELEASE),)
 # call from kernel build system
 
+ccflags-y += -I$(src)/../include
+
 scull-objs := main.o pipe.o access.o
 
 obj-m	:= scull.o
